@@ -9,8 +9,8 @@ stock
 
 */
 
-import { Schema } from "mongoose";
-import { Model } from "mongoose";
+import { Schema, model } from "mongoose";
+
 
 const productsSchema = new Schema ({
 

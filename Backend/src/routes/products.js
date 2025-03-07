@@ -1,11 +1,17 @@
 import express from "express";
+import productsController from "../controllers/productsControllers.js";
+
 
 // Router() nos ayuda a colocar los metodos que tendra mi ruta
-const router = express.Router
+const router = express.Router()
 
 router.route("/")
-.get()
-.post()
-.put()
-.delete();
+.get(productsController.getProducts)
+.post(productsController.createProducts)
+
+router.route("/:id")
+.put(productsController.updateProducts)
+.delete(productsController.deleteProducts);
+
+export default router;
 
